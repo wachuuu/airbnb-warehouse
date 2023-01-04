@@ -1,7 +1,5 @@
 package com.bigdata.spark
-import org.apache.spark.sql.{Dataset, Encoder, SparkSession}
-
-import java.util.Date
+import org.apache.spark.sql.{Dataset, SparkSession}
 
 case class Listing (
                    id: String,
