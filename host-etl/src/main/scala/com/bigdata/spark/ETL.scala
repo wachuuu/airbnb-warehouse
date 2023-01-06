@@ -34,6 +34,7 @@ object ETL {
 
     val sourceDir: String = args(0)
     val spark = SparkSession.builder().appName(JOB_NAME).master("local[*]").getOrCreate()
+    val format = new java.text.SimpleDateFormat("yyyy-MM-dd")
 
     import spark.implicits._
 
@@ -71,6 +72,8 @@ object ETL {
       .csv(s"$sourceDir/listing/MadridListings.csv")
       .as[Listing]
 
+    berlinListingsDS.foreach(x => println(x))
+
     val berlinHosts = berlinListingsDS
       .select("host_id", "host_name")
       .dropDuplicates("host_id")
@@ -91,6 +94,6 @@ object ETL {
       .union(madridHosts)
       .dropDuplicates("host_id")
 
-    allHosts.write.insertInto(DESTINATION_TABLE)
+//    allHosts.write.insertInto(DESTINATION_TABLE)
   }
 }
