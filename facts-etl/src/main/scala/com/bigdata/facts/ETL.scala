@@ -58,8 +58,7 @@ object ETL {
     val reviewsListingsCalendarEntriesDs: Dataset[ReviewEntry] =
       joinAndGroupDatasets(ratedReviewsDs, listingsDs, calendarsDs, spark)
 
-    reviewsListingsCalendarEntriesDs
-      .where(reviewsListingsCalendarEntriesDs("prices_sum").isNotNull).show()
+    reviewsListingsCalendarEntriesDs.write.insertInto(TABLE_NAME)
   }
 
   def parsePositiveWordFiles(): Set[String] = {

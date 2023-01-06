@@ -41,7 +41,7 @@ object DataGrouper {
       room_type = entry._1._2.room_type,
       // assuming that if no entry was found in *.Calendar.csv, then in the day of review the apartment was available.
       available = if (entry._2 == null) true else entry._2.available,
-      price = if (entry._2 == null) null else entry._2.price,
+      price = if (entry._2 == null) Option(entry._1._2.price.toDouble) else entry._2.price,
       rating = entry._1._1.rating,
       number_of_reviews = entry._1._2.number_of_reviews
     ))
