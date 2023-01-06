@@ -72,8 +72,6 @@ object ETL {
       .csv(s"$sourceDir/listing/MadridListings.csv")
       .as[Listing]
 
-    berlinListingsDS.foreach(x => println(x))
-
     val berlinHosts = berlinListingsDS
       .select("host_id", "host_name")
       .dropDuplicates("host_id")
@@ -94,6 +92,6 @@ object ETL {
       .union(madridHosts)
       .dropDuplicates("host_id")
 
-//    allHosts.write.insertInto(DESTINATION_TABLE)
+    allHosts.write.insertInto(DESTINATION_TABLE)
   }
 }
