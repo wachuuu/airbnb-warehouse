@@ -1,10 +1,10 @@
 package com.bigdata.facts
 
-import org.apache.spark.sql.expressions.Window
-import org.apache.spark.sql.functions.{col, count, monotonically_increasing_id, row_number, sum, when}
+import org.apache.spark.sql.functions.{col, count, monotonically_increasing_id, sum, when}
 import org.apache.spark.sql.{Dataset, SparkSession}
 
 import java.time.LocalDate
+import java.time.format.DateTimeFormatter
 
 
 case class JoinedRow(
@@ -18,7 +18,23 @@ case class JoinedRow(
                       number_of_reviews: Int,
                     )
 
+
+case class ReviewSubEntry(
+                           id: String,
+                           neighbourhood: String,
+                           date: String,
+                           host_id: String,
+                           room_type: String,
+                           available_listings_count: BigInt,
+                           not_available_listings_count: BigInt,
+                           prices_sum: Option[Double],
+                           ratings_sum: Double,
+                           declared_reviews_count: BigInt,
+                         )
+
 object DataGrouper {
+
+  val FORMAT: DateTimeFormatter = DateTimeFormatter.ISO_DATE
 
   def joinAndGroupDatasets(ratedReviewsDs: Dataset[RatedReview],
                            listingsDs: Dataset[Listing],
@@ -59,8 +75,18 @@ object DataGrouper {
       //        sum(when(col("price").isNull, 0).otherwise(col("price"))).as("prices_sum"),
       sum(col("rating")).as("ratings_sum"),
       sum(col("number_of_reviews")).as("declared_reviews_count")
-    ).withColumn("id", row_number().over(Window.orderBy(monotonically_increasing_id())) - 1)
-      .as[ReviewEntry]
+    ).withColumn("id", monotonically_increasing_id())
+      .as[ReviewSubEntry]
+      .map(entry => ReviewEntry(id = entry.id,
+        neighbourhood = entry.neighbourhood,
+        date = LocalDate.parse(entry.date, FORMAT),
+        host_id = entry.host_id,
+        room_type = entry.room_type,
+        available_listings_count = entry.available_listings_count,
+        not_available_listings_count = entry.not_available_listings_count,
+        prices_sum = entry.prices_sum,
+        ratings_sum = entry.ratings_sum,
+        declared_reviews_count = entry.declared_reviews_count))
   }
 
 }

@@ -6,9 +6,9 @@ import org.apache.spark.sql.{Dataset, SparkSession}
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 
-case class InputReview(listingId: Int, date: LocalDate, comment: String)
+case class InputReview(listingId: BigInt, date: LocalDate, comment: String)
 
-case class RatedReview(listingId: Int, date: LocalDate, rating: Double)
+case class RatedReview(listingId: BigInt, date: LocalDate, rating: Double)
 
 object ReviewsInputParser {
 
@@ -87,6 +87,6 @@ object ReviewsInputParser {
 
   private def parseReviewFile(file: String): Iterator[InputReview] = {
     PATTERN.findAllMatchIn(file)
-      .map(m => InputReview(m.group(1).toInt, LocalDate.parse(m.group(2), formatter), m.group(3)))
+      .map(m => InputReview(BigInt(m.group(1).toInt), LocalDate.parse(m.group(2), formatter), m.group(3)))
   }
 }

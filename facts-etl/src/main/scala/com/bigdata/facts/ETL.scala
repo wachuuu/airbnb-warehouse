@@ -11,14 +11,14 @@ import scala.io.Source
 
 
 case class ReviewEntry(
-                        id: Int,
+                        id: String,
                         neighbourhood: String,
                         date: LocalDate,
-                        host_id: Int,
+                        host_id: String,
                         room_type: String,
                         available_listings_count: BigInt,
                         not_available_listings_count: BigInt,
-                        prices_sum: Double,
+                        prices_sum: Option[Double],
                         ratings_sum: Double,
                         declared_reviews_count: BigInt,
                       )
