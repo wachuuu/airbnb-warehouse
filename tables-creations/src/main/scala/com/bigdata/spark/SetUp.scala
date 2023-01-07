@@ -65,7 +65,7 @@ object SetUp {
 
     spark.sql(
       """CREATE TABLE tof_reviews (
-   `id` int,
+   `id` string,
    `neighbourhood` string,
    `date` date,
    `host_id` string,
