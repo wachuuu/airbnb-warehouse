@@ -71,8 +71,8 @@ object SetUp {
    `room_type` string,
    `available_listings_count` int,
    `not_available_listings_count` int,
-   `prices_sum` int,
-   `ratings_sum` int,
+   `prices_sum` double,
+   `ratings_sum` double,
    `declared_reviews_count` int)
   ROW FORMAT SERDE
    'org.apache.hadoop.hive.ql.io.orc.OrcSerde'
