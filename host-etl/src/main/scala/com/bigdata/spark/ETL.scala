@@ -34,6 +34,7 @@ object ETL {
 
     val sourceDir: String = args(0)
     val spark = SparkSession.builder().appName(JOB_NAME).master("local[*]").getOrCreate()
+    val format = new java.text.SimpleDateFormat("yyyy-MM-dd")
 
     import spark.implicits._
 
