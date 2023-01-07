@@ -42,7 +42,8 @@ object SetUp {
     spark.sql(
       """CREATE TABLE dim_date (
    `date` date,
-   `month` string,
+   `day` int,
+   `month` int,
    `year` int)
   ROW FORMAT SERDE
    'org.apache.hadoop.hive.ql.io.orc.OrcSerde'
