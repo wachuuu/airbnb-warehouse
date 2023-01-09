@@ -1,0 +1,1484 @@
+﻿{
+  "paragraphs": [
+    {
+      "text": "spark.sql(\"show tables\").show()",
+      "user": "anonymous",
+      "dateUpdated": "2023-01-09T18:17:33+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "completionKey": "TAB",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "language": "scala"
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+--------+-----------------+-----------+\n|database|        tableName|isTemporary|\n+--------+-----------------+-----------+\n| default|         dim_date|      false|\n| default|         dim_host|      false|\n| default|dim_neighbourhood|      false|\n| default|    dim_room_type|      false|\n| default|      tof_reviews|      false|\n+--------+-----------------+-----------+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1673213408073_1091453414",
+      "id": "paragraph_1673213408073_1091453414",
+      "dateCreated": "2023-01-08T21:30:08+0000",
+      "dateStarted": "2023-01-09T16:51:21+0000",
+      "dateFinished": "2023-01-09T16:51:51+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:33731"
+    },
+    {
+      "text": "spark.sql(\"SELECT * FROM dim_date LIMIT 10\").show()",
+      "user": "anonymous",
+      "dateUpdated": "2023-01-09T16:51:52+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "completionKey": "TAB",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "language": "scala"
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+----------+----+-----+----+\n|      date| day|month|year|\n+----------+----+-----+----+\n|2009-06-20|2009|    6|  20|\n|2009-06-30|2009|    6|  30|\n|2009-07-03|2009|    7|   3|\n|2009-07-08|2009|    7|   8|\n|2009-08-18|2009|    8|  18|\n|2009-09-10|2009|    9|  10|\n|2009-09-28|2009|    9|  28|\n|2009-10-05|2009|   10|   5|\n|2009-11-25|2009|   11|  25|\n|2009-11-29|2009|   11|  29|\n+----------+----+-----+----+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://my-cluster-m.europe-west4-a.c.put-big-data-2022-10-jk.internal:43707/jobs/job?id=0",
+              "$$hashKey": "object:34615"
+            },
+            {
+              "jobUrl": "http://my-cluster-m.europe-west4-a.c.put-big-data-2022-10-jk.internal:43707/jobs/job?id=1",
+              "$$hashKey": "object:34616"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1673213429460_1080547019",
+      "id": "paragraph_1673213429460_1080547019",
+      "dateCreated": "2023-01-08T21:30:29+0000",
+      "dateStarted": "2023-01-09T16:51:52+0000",
+      "dateFinished": "2023-01-09T16:52:00+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:33732"
+    },
+    {
+      "text": "spark.sql(\"SELECT * FROM dim_host LIMIT 10\").show()",
+      "user": "anonymous",
+      "dateUpdated": "2023-01-09T16:52:00+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "completionKey": "TAB",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "language": "scala"
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-----+-----------+\n|   id|       name|\n+-----+-----------+\n| 1581|    Annette|\n| 2217|        Ion|\n| 2827|     Karine|\n| 3718|     Britta|\n|11622|      Maria|\n|19105|     Carlos|\n|22155|      Anaïs|\n|23559|Hospitalier|\n|24212|    Nicolas|\n|28884|       Fion|\n+-----+-----------+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://my-cluster-m.europe-west4-a.c.put-big-data-2022-10-jk.internal:43707/jobs/job?id=2",
+              "$$hashKey": "object:34678"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1673213451725_400230149",
+      "id": "paragraph_1673213451725_400230149",
+      "dateCreated": "2023-01-08T21:30:51+0000",
+      "dateStarted": "2023-01-09T16:52:00+0000",
+      "dateFinished": "2023-01-09T16:52:01+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:33733"
+    },
+    {
+      "text": "spark.sql(\"SELECT * FROM dim_neighbourhood WHERE city='PARIS' LIMIT 10\").show()",
+      "user": "anonymous",
+      "dateUpdated": "2023-01-09T16:52:01+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "completionKey": "TAB",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "language": "scala"
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-----------------+-----+-----+\n|             name|group| city|\n+-----------------+-----+-----+\n|         Entrepôt| null|PARIS|\n|     Ménilmontant| null|PARIS|\n|            Opéra| null|PARIS|\n|       Popincourt| null|PARIS|\n|          Reuilly| null|PARIS|\n|           Temple| null|PARIS|\n|   Palais-Bourbon| null|PARIS|\n|  Buttes-Chaumont| null|PARIS|\n|Buttes-Montmartre| null|PARIS|\n|   Hôtel-de-Ville| null|PARIS|\n+-----------------+-----+-----+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://my-cluster-m.europe-west4-a.c.put-big-data-2022-10-jk.internal:43707/jobs/job?id=3",
+              "$$hashKey": "object:34736"
+            },
+            {
+              "jobUrl": "http://my-cluster-m.europe-west4-a.c.put-big-data-2022-10-jk.internal:43707/jobs/job?id=4",
+              "$$hashKey": "object:34737"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1673213465996_1303735828",
+      "id": "paragraph_1673213465996_1303735828",
+      "dateCreated": "2023-01-08T21:31:05+0000",
+      "dateStarted": "2023-01-09T16:52:01+0000",
+      "dateFinished": "2023-01-09T16:52:03+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:33734"
+    },
+    {
+      "text": "spark.sql(\"SELECT * FROM dim_room_type\").show()",
+      "user": "anonymous",
+      "dateUpdated": "2023-01-09T18:13:37+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "completionKey": "TAB",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "language": "scala"
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+---------------+\n|      room_type|\n+---------------+\n|Entire home/apt|\n|   Private room|\n|    Shared room|\n|     Hotel room|\n+---------------+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://my-cluster-m.europe-west4-a.c.put-big-data-2022-10-jk.internal:43707/jobs/job?id=445",
+              "$$hashKey": "object:34799"
+            },
+            {
+              "jobUrl": "http://my-cluster-m.europe-west4-a.c.put-big-data-2022-10-jk.internal:43707/jobs/job?id=446",
+              "$$hashKey": "object:34800"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1673213483148_1598378721",
+      "id": "paragraph_1673213483148_1598378721",
+      "dateCreated": "2023-01-08T21:31:23+0000",
+      "dateStarted": "2023-01-09T18:13:37+0000",
+      "dateFinished": "2023-01-09T18:13:37+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:33735"
+    },
+    {
+      "text": "spark.sql(\"SELECT * FROM  tof_reviews LIMIT 10\").show()",
+      "user": "anonymous",
+      "dateUpdated": "2023-01-09T18:05:45+0000",
+      "progress": 33,
+      "config": {
+        "editorSetting": {
+          "completionKey": "TAB",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "language": "scala"
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-----------+--------------------+----------+-------+---------------+------------------------+----------------------------+----------+-----------+----------------------+\n|         id|       neighbourhood|      date|host_id|      room_type|available_listings_count|not_available_listings_count|prices_sum|ratings_sum|declared_reviews_count|\n+-----------+--------------------+----------+-------+---------------+------------------------+----------------------------+----------+-----------+----------------------+\n|25769803776|               Opéra|2013-07-09|  20633|   Private room|                       1|                           0|      65.0|        5.0|                   126|\n|25769803777|              Élysée|2014-07-22|  98012|Entire home/apt|                       1|                           0|      76.0|        5.0|                    30|\n|25769803778|   Buttes-Montmartre|2018-11-28| 111157|Entire home/apt|                       1|                           0|      75.0|        4.0|                   463|\n|25769803779|            Panthéon|2011-09-29| 143558|Entire home/apt|                       1|                           0|      88.0|        5.0|                    70|\n|25769803780|Prenzlauer Berg N...|2015-10-11|  54283|Entire home/apt|                       1|                           0|     230.0|        4.0|                    93|\n|25769803781|         Embajadores|2015-06-15| 259229|Entire home/apt|                       1|                           0|      70.0|        2.5|                   185|\n|25769803782|         Embajadores|2016-05-12|5795235|Entire home/apt|                       1|                           0|      50.0|        5.0|                    61|\n|25769803783|             Palacio|2017-07-09| 605612|   Private room|                       1|                           0|      23.0|        2.5|                   194|\n|25769803784|         Universidad|2016-06-07| 850654|   Private room|                       1|                           0|      20.0|        5.0|                   105|\n|25769803785|              Bourse|2013-04-06| 863908|Entire home/apt|                       1|                           0|      90.0|        5.0|                   142|\n+-----------+--------------------+----------+-------+---------------+------------------------+----------------------------+----------+-----------+----------------------+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://my-cluster-m.europe-west4-a.c.put-big-data-2022-10-jk.internal:43707/jobs/job?id=428",
+              "$$hashKey": "object:34862"
+            },
+            {
+              "jobUrl": "http://my-cluster-m.europe-west4-a.c.put-big-data-2022-10-jk.internal:43707/jobs/job?id=429",
+              "$$hashKey": "object:34863"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1673213510047_1356239463",
+      "id": "paragraph_1673213510047_1356239463",
+      "dateCreated": "2023-01-08T21:31:50+0000",
+      "dateStarted": "2023-01-09T18:05:45+0000",
+      "dateFinished": "2023-01-09T18:05:45+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:33736"
+    },
+    {
+      "text": "%md\n\n# Airbnb\n\nThe aim of this notebook is to visualize and compare data about airbnb offerts from Madrid, Paris and Berlin from years 2009-2019. Source to original data: http://insideairbnb.com/get-the-data.html. \n\nAirbnb is an online platform founded in 2008 in the United States for the short-term rental of accommodation from private individuals. It is an alternative to hotels, hostels and guesthouses. Since its inception, the platform has grown in popularity and gained more and more users. In the graph below, you can see the number of reviews given by users over the years.",
+      "user": "anonymous",
+      "dateUpdated": "2023-01-09T18:17:17+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "completionKey": "TAB",
+          "editOnDblClick": true,
+          "completionSupport": false,
+          "language": "markdown"
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h1>Airbnb</h1>\n<p>The aim of this notebook is to visualize and compare data about airbnb offerts from Madrid, Paris and Berlin from years 2009-2019. Source to original data: <a href=\"http://insideairbnb.com/get-the-data.html\">http://insideairbnb.com/get-the-data.html</a>.</p>\n<p>Airbnb is an online platform founded in 2008 in the United States for the short-term rental of accommodation from private individuals. It is an alternative to hotels, hostels and guesthouses. Since its inception, the platform has grown in popularity and gained more and more users. In the graph below, you can see the number of reviews given by users over the years.</p>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1673285429673_2129847594",
+      "id": "paragraph_1673285429673_2129847594",
+      "dateCreated": "2023-01-09T17:30:29+0000",
+      "dateStarted": "2023-01-09T18:17:17+0000",
+      "dateFinished": "2023-01-09T18:17:17+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:33738"
+    },
+    {
+      "text": "val cityDF2 = spark.table(\"dim_neighbourhood\").select(\"name\", \"city\");\nval dateDF2 = spark.table(\"dim_date\").select(\"date\", \"day\");\nval roomDF2 = spark.table(\"dim_room_type\").select(\"room_type\");\nval ratingDF2 = spark.table(\"tof_reviews\").select(\"neighbourhood\", \"date\", \"room_type\", \"available_listings_count\", \"not_available_listings_count\");",
+      "user": "anonymous",
+      "dateUpdated": "2023-01-09T18:14:08+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "completionKey": "TAB",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "language": "scala"
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mcityDF2\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [name: string, city: string]\n\u001b[1m\u001b[34mdateDF2\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [date: date, day: int]\n\u001b[1m\u001b[34mroomDF2\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [room_type: string]\n\u001b[1m\u001b[34mratingDF2\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [neighbourhood: string, date: date ... 3 more fields]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1673285871708_2062839443",
+      "id": "paragraph_1673285871708_2062839443",
+      "dateCreated": "2023-01-09T17:37:51+0000",
+      "dateStarted": "2023-01-09T18:14:08+0000",
+      "dateFinished": "2023-01-09T18:14:09+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:33739"
+    },
+    {
+      "text": "val analysis2 = ratingDF2.\njoin(cityDF2, ratingDF2(\"neighbourhood\") === cityDF2(\"name\")).\njoin(dateDF2, ratingDF2(\"date\") === dateDF2(\"date\")).\njoin(roomDF2, ratingDF2(\"room_type\") === roomDF2(\"room_type\")).\ngroupBy(cityDF2(\"city\"), dateDF2(\"day\")).\npivot(roomDF2(\"room_type\")).\nagg(\n    sum($\"available_listings_count\" + $\"not_available_listings_count\").as(\"count\")\n    )",
+      "user": "anonymous",
+      "dateUpdated": "2023-01-09T18:14:10+0000",
+      "progress": 14,
+      "config": {
+        "editorSetting": {
+          "completionKey": "TAB",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "language": "scala"
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34manalysis2\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [city: string, day: int ... 4 more fields]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://my-cluster-m.europe-west4-a.c.put-big-data-2022-10-jk.internal:43707/jobs/job?id=447",
+              "$$hashKey": "object:35081"
+            },
+            {
+              "jobUrl": "http://my-cluster-m.europe-west4-a.c.put-big-data-2022-10-jk.internal:43707/jobs/job?id=450",
+              "$$hashKey": "object:35082"
+            },
+            {
+              "jobUrl": "http://my-cluster-m.europe-west4-a.c.put-big-data-2022-10-jk.internal:43707/jobs/job?id=451",
+              "$$hashKey": "object:35083"
+            },
+            {
+              "jobUrl": "http://my-cluster-m.europe-west4-a.c.put-big-data-2022-10-jk.internal:43707/jobs/job?id=452",
+              "$$hashKey": "object:35084"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1673285886763_602105352",
+      "id": "paragraph_1673285886763_602105352",
+      "dateCreated": "2023-01-09T17:38:06+0000",
+      "dateStarted": "2023-01-09T18:14:10+0000",
+      "dateFinished": "2023-01-09T18:14:13+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:33740"
+    },
+    {
+      "text": "val city2 = z.select(\"Choose a city\", \"MADRID\", Seq((\"MADRID\", \"Madrid\"), (\"BERLIN\", \"Berlin\"), (\"PARIS\", \"Paris\")))\nval result2 = analysis2.where($\"city\" === city2).drop(\"city\").orderBy($\"day\".asc)\nz.show(result2)",
+      "user": "anonymous",
+      "dateUpdated": "2023-01-09T18:14:42+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "completionKey": "TAB",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "language": "scala"
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "runOnSelectionChange": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "lineChart",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "multiBarChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                },
+                "lineChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                }
+              },
+              "commonSetting": {},
+              "keys": [
+                {
+                  "name": "day",
+                  "index": 0,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [],
+              "values": [
+                {
+                  "name": "Hotel room",
+                  "index": 2,
+                  "aggr": "sum"
+                },
+                {
+                  "name": "Shared room",
+                  "index": 4,
+                  "aggr": "sum"
+                },
+                {
+                  "name": "Private room",
+                  "index": 3,
+                  "aggr": "sum"
+                },
+                {
+                  "name": "Entire home/apt",
+                  "index": 1,
+                  "aggr": "sum"
+                }
+              ]
+            },
+            "helium": {}
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {
+          "Choose a city": "PARIS"
+        },
+        "forms": {
+          "Choose a city": {
+            "type": "Select",
+            "options": [
+              {
+                "value": "MADRID",
+                "displayName": "Madrid",
+                "$$hashKey": "object:36911"
+              },
+              {
+                "value": "BERLIN",
+                "displayName": "Berlin",
+                "$$hashKey": "object:36912"
+              },
+              {
+                "value": "PARIS",
+                "displayName": "Paris",
+                "$$hashKey": "object:36913"
+              }
+            ],
+            "name": "Choose a city",
+            "displayName": "Choose a city",
+            "defaultValue": "MADRID",
+            "hidden": false,
+            "$$hashKey": "object:36900"
+          }
+        }
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "day\tEntire home/apt\tHotel room\tPrivate room\tShared room\n2009\t6\tnull\tnull\tnull\n2010\t264\tnull\t61\tnull\n2011\t1136\t1\t244\tnull\n2012\t4054\t1\t727\t40\n2013\t10526\t5\t2021\t95\n2014\t27515\t68\t5193\t138\n2015\t63252\t91\t12274\t344\n2016\t98903\t397\t19202\t634\n2017\t151603\t1946\t28031\t800\n2018\t205936\t4258\t36464\t1354\n"
+          },
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mcity2\u001b[0m: \u001b[1m\u001b[32mAny\u001b[0m = PARIS\n\u001b[1m\u001b[34mresult2\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.Dataset[org.apache.spark.sql.Row]\u001b[0m = [day: int, Entire home/apt: bigint ... 3 more fields]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://my-cluster-m.europe-west4-a.c.put-big-data-2022-10-jk.internal:43707/jobs/job?id=468",
+              "$$hashKey": "object:36914"
+            },
+            {
+              "jobUrl": "http://my-cluster-m.europe-west4-a.c.put-big-data-2022-10-jk.internal:43707/jobs/job?id=469",
+              "$$hashKey": "object:36915"
+            },
+            {
+              "jobUrl": "http://my-cluster-m.europe-west4-a.c.put-big-data-2022-10-jk.internal:43707/jobs/job?id=470",
+              "$$hashKey": "object:36916"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1673285897049_1680785691",
+      "id": "paragraph_1673285897049_1680785691",
+      "dateCreated": "2023-01-09T17:38:17+0000",
+      "dateStarted": "2023-01-09T18:14:42+0000",
+      "dateFinished": "2023-01-09T18:14:44+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:33741"
+    },
+    {
+      "text": "%md\nThe total price of an Airbnb booking depends on the rate per night set by the host plus any other fees or costs set by the host or Airbnb (such as cleaning fee, Airbnb service charge or local taxes). Prices of listings may vary from month to month. Select the months and city in which you wish to compare prices for different room types.",
+      "user": "anonymous",
+      "dateUpdated": "2023-01-09T18:14:46+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "completionKey": "TAB",
+          "editOnDblClick": true,
+          "completionSupport": false,
+          "language": "markdown"
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<p>The total price of an Airbnb booking depends on the rate per night set by the host plus any other fees or costs set by the host or Airbnb (such as cleaning fee, Airbnb service charge or local taxes). Prices of listings may vary from month to month. Select the months and city in which you wish to compare prices for different room types.</p>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1673286011123_345890019",
+      "id": "paragraph_1673286011123_345890019",
+      "dateCreated": "2023-01-09T17:40:11+0000",
+      "dateStarted": "2023-01-09T18:14:46+0000",
+      "dateFinished": "2023-01-09T18:14:46+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:33742"
+    },
+    {
+      "text": "val months_seq = Seq((\"1\",\"Jan\"), (\"2\",\"Feb\"), (\"3\",\"Mar\"), (\"4\",\"Apr\"), (\"5\",\"May\"), (\"6\",\"Jun\"), (\"7\",\"Jul\"), (\"8\",\"Aug\"), (\"9\",\"Sep\"),(\"10\",\"Oct\"), (\"11\",\"Nov\"), (\"12\",\"Dec\"))\nval m = z.checkbox(\"Month\", months_seq)",
+      "user": "anonymous",
+      "dateUpdated": "2023-01-09T18:15:52+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "completionKey": "TAB",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "language": "scala"
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true,
+        "runOnSelectionChange": true
+      },
+      "settings": {
+        "params": {
+          "Month": [
+            "1",
+            "6",
+            "7",
+            "10"
+          ]
+        },
+        "forms": {
+          "Month": {
+            "type": "CheckBox",
+            "options": [
+              {
+                "value": "1",
+                "displayName": "Jan",
+                "$$hashKey": "object:39183"
+              },
+              {
+                "value": "2",
+                "displayName": "Feb",
+                "$$hashKey": "object:39184"
+              },
+              {
+                "value": "3",
+                "displayName": "Mar",
+                "$$hashKey": "object:39185"
+              },
+              {
+                "value": "4",
+                "displayName": "Apr",
+                "$$hashKey": "object:39186"
+              },
+              {
+                "value": "5",
+                "displayName": "May",
+                "$$hashKey": "object:39187"
+              },
+              {
+                "value": "6",
+                "displayName": "Jun",
+                "$$hashKey": "object:39188"
+              },
+              {
+                "value": "7",
+                "displayName": "Jul",
+                "$$hashKey": "object:39189"
+              },
+              {
+                "value": "8",
+                "displayName": "Aug",
+                "$$hashKey": "object:39190"
+              },
+              {
+                "value": "9",
+                "displayName": "Sep",
+                "$$hashKey": "object:39191"
+              },
+              {
+                "value": "10",
+                "displayName": "Oct",
+                "$$hashKey": "object:39192"
+              },
+              {
+                "value": "11",
+                "displayName": "Nov",
+                "$$hashKey": "object:39193"
+              },
+              {
+                "value": "12",
+                "displayName": "Dec",
+                "$$hashKey": "object:39194"
+              }
+            ],
+            "name": "Month",
+            "displayName": "Month",
+            "defaultValue": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7",
+              "8",
+              "9",
+              "10",
+              "11",
+              "12"
+            ],
+            "hidden": false,
+            "$$hashKey": "object:39172"
+          }
+        }
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mmonths_seq\u001b[0m: \u001b[1m\u001b[32mSeq[(String, String)]\u001b[0m = List((1,Jan), (2,Feb), (3,Mar), (4,Apr), (5,May), (6,Jun), (7,Jul), (8,Aug), (9,Sep), (10,Oct), (11,Nov), (12,Dec))\n\u001b[1m\u001b[34mm\u001b[0m: \u001b[1m\u001b[32mSeq[Any]\u001b[0m = Buffer(1, 6, 7, 10)\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1672689276761_562173150",
+      "id": "paragraph_1672689276761_562173150",
+      "dateCreated": "2023-01-02T19:54:36+0000",
+      "dateStarted": "2023-01-09T18:15:52+0000",
+      "dateFinished": "2023-01-09T18:15:53+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:33743"
+    },
+    {
+      "text": "import org.apache.spark.sql.functions._;\rval cityDF = spark.table(\"dim_neighbourhood\").select(\"name\", \"group\", \"city\");\rval dateDF = spark.table(\"dim_date\").select(\"date\", \"month\");\rval roomDF = spark.table(\"dim_room_type\").select(\"room_type\");\rval ratingDF = spark.table(\"tof_reviews\").select(\"neighbourhood\", \"date\", \"room_type\", \"prices_sum\", \"available_listings_count\", \"not_available_listings_count\");\r",
+      "user": "anonymous",
+      "dateUpdated": "2023-01-09T18:15:55+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "completionKey": "TAB",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "language": "scala"
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "import org.apache.spark.sql.functions._\n\u001b[1m\u001b[34mcityDF\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [name: string, group: string ... 1 more field]\n\u001b[1m\u001b[34mdateDF\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [date: date, month: int]\n\u001b[1m\u001b[34mroomDF\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [room_type: string]\n\u001b[1m\u001b[34mratingDF\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [neighbourhood: string, date: date ... 4 more fields]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1673213326594_2032778889",
+      "id": "paragraph_1673213326594_2032778889",
+      "dateCreated": "2023-01-08T21:28:46+0000",
+      "dateStarted": "2023-01-09T18:15:56+0000",
+      "dateFinished": "2023-01-09T18:15:56+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:33744"
+    },
+    {
+      "text": "val analysis1 = ratingDF.\njoin(cityDF, ratingDF(\"neighbourhood\") === cityDF(\"name\")).\njoin(dateDF, ratingDF(\"date\") === dateDF(\"date\")).\njoin(roomDF, ratingDF(\"room_type\") === roomDF(\"room_type\")).\nwhere($\"month\".isin(m:_*)).\ngroupBy(cityDF(\"city\"), dateDF(\"month\")).\npivot(roomDF(\"room_type\")).\nagg(\n    sum(\"prices_sum\")/sum($\"available_listings_count\" + $\"not_available_listings_count\")\n)\n",
+      "user": "anonymous",
+      "dateUpdated": "2023-01-09T18:15:57+0000",
+      "progress": 50,
+      "config": {
+        "editorSetting": {
+          "completionKey": "TAB",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "language": "scala"
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34manalysis1\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [city: string, month: int ... 4 more fields]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://my-cluster-m.europe-west4-a.c.put-big-data-2022-10-jk.internal:43707/jobs/job?id=484",
+              "$$hashKey": "object:39332"
+            },
+            {
+              "jobUrl": "http://my-cluster-m.europe-west4-a.c.put-big-data-2022-10-jk.internal:43707/jobs/job?id=487",
+              "$$hashKey": "object:39333"
+            },
+            {
+              "jobUrl": "http://my-cluster-m.europe-west4-a.c.put-big-data-2022-10-jk.internal:43707/jobs/job?id=488",
+              "$$hashKey": "object:39334"
+            },
+            {
+              "jobUrl": "http://my-cluster-m.europe-west4-a.c.put-big-data-2022-10-jk.internal:43707/jobs/job?id=489",
+              "$$hashKey": "object:39335"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1673214058936_1387675052",
+      "id": "paragraph_1673214058936_1387675052",
+      "dateCreated": "2023-01-08T21:40:58+0000",
+      "dateStarted": "2023-01-09T18:15:57+0000",
+      "dateFinished": "2023-01-09T18:15:59+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:33745"
+    },
+    {
+      "text": "val city = z.select(\"Choose a city\", \"MADRID\", Seq((\"MADRID\", \"Madrid\"), (\"BERLIN\", \"Berlin\"), (\"PARIS\", \"Paris\")))\r\nval result1 = analysis1.where($\"city\" === city).drop(\"city\")\r\nz.show(result1)\r\n",
+      "user": "anonymous",
+      "dateUpdated": "2023-01-09T18:16:17+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "completionKey": "TAB",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "language": "scala"
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "multiBarChart",
+              "height": 634.844,
+              "optionOpen": false,
+              "setting": {
+                "multiBarChart": {
+                  "rotate": {
+                    "degree": "-90"
+                  },
+                  "xLabelStatus": "default",
+                  "stacked": false
+                },
+                "lineChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                },
+                "stackedAreaChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default",
+                  "style": "stream"
+                },
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "1": "string",
+                      "3": "string",
+                      "4": "string",
+                      "5": "string",
+                      "group": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {},
+              "keys": [
+                {
+                  "name": "month",
+                  "index": 0,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [],
+              "values": [
+                {
+                  "name": "Shared room",
+                  "index": 4,
+                  "aggr": "sum"
+                },
+                {
+                  "name": "Private room",
+                  "index": 3,
+                  "aggr": "sum"
+                },
+                {
+                  "name": "Entire home/apt",
+                  "index": 1,
+                  "aggr": "sum"
+                },
+                {
+                  "name": "Hotel room",
+                  "index": 2,
+                  "aggr": "sum"
+                }
+              ]
+            },
+            "helium": {}
+          }
+        },
+        "enabled": true,
+        "runOnSelectionChange": true
+      },
+      "settings": {
+        "params": {
+          "Choose a city": "PARIS"
+        },
+        "forms": {
+          "Choose a city": {
+            "type": "Select",
+            "options": [
+              {
+                "value": "MADRID",
+                "displayName": "Madrid",
+                "$$hashKey": "object:40083"
+              },
+              {
+                "value": "BERLIN",
+                "displayName": "Berlin",
+                "$$hashKey": "object:40084"
+              },
+              {
+                "value": "PARIS",
+                "displayName": "Paris",
+                "$$hashKey": "object:40085"
+              }
+            ],
+            "name": "Choose a city",
+            "displayName": "Choose a city",
+            "defaultValue": "MADRID",
+            "hidden": false,
+            "$$hashKey": "object:40072"
+          }
+        }
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "month\tEntire home/apt\tHotel room\tPrivate room\tShared room\n10\t119.44564237999067\t119.87774294670847\t63.85652452709202\t47.520930232558136\n7\t121.7769356563306\t131.05428571428573\t63.04746677325872\t44.6767955801105\n6\t119.46395797201502\t134.28571428571428\t63.3125576713363\t47.88279301745636\n1\t116.16513733866843\t130.79016393442623\t61.93241636950246\t45.506410256410255\n"
+          },
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mcity\u001b[0m: \u001b[1m\u001b[32mAny\u001b[0m = PARIS\n\u001b[1m\u001b[34mresult1\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [month: int, Entire home/apt: double ... 3 more fields]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://my-cluster-m.europe-west4-a.c.put-big-data-2022-10-jk.internal:43707/jobs/job?id=507",
+              "$$hashKey": "object:40086"
+            },
+            {
+              "jobUrl": "http://my-cluster-m.europe-west4-a.c.put-big-data-2022-10-jk.internal:43707/jobs/job?id=508",
+              "$$hashKey": "object:40087"
+            },
+            {
+              "jobUrl": "http://my-cluster-m.europe-west4-a.c.put-big-data-2022-10-jk.internal:43707/jobs/job?id=509",
+              "$$hashKey": "object:40088"
+            },
+            {
+              "jobUrl": "http://my-cluster-m.europe-west4-a.c.put-big-data-2022-10-jk.internal:43707/jobs/job?id=510",
+              "$$hashKey": "object:40089"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1673214386763_789590178",
+      "id": "paragraph_1673214386763_789590178",
+      "dateCreated": "2023-01-08T21:46:26+0000",
+      "dateStarted": "2023-01-09T18:16:17+0000",
+      "dateFinished": "2023-01-09T18:16:18+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:33746"
+    },
+    {
+      "text": "%md\nAirbnb is created by its users, if you would like to find the best-rated hosts in particular neighbourhoods of your chosen city from the last year, please use the options below.\n",
+      "user": "anonymous",
+      "dateUpdated": "2023-01-09T18:16:25+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "completionKey": "TAB",
+          "editOnDblClick": true,
+          "completionSupport": false,
+          "language": "markdown"
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<p>Airbnb is created by its users, if you would like to find the best-rated hosts in particular neighbourhoods of your chosen city from the last year, please use the options below.</p>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1673215728031_775170425",
+      "id": "paragraph_1673215728031_775170425",
+      "dateCreated": "2023-01-08T22:08:48+0000",
+      "dateStarted": "2023-01-09T18:16:25+0000",
+      "dateFinished": "2023-01-09T18:16:25+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:33747"
+    },
+    {
+      "text": "val cityDF3 = spark.table(\"dim_neighbourhood\").select(\"name\", \"group\", \"city\");\rval dateDF3 = spark.table(\"dim_date\").select(\"date\", \"day\");\rval hostDF3 = spark.table(\"dim_host\").select(\"id\", \"name\");\rval ratingDF3 = spark.table(\"tof_reviews\").select(\"neighbourhood\", \"date\", \"host_id\", \"ratings_sum\", \"available_listings_count\", \"not_available_listings_count\");",
+      "user": "anonymous",
+      "dateUpdated": "2023-01-09T18:16:38+0000",
+      "progress": 0,
+      "config": {
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "completionKey": "TAB",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "language": "scala"
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mcityDF3\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [name: string, group: string ... 1 more field]\n\u001b[1m\u001b[34mdateDF3\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [date: date, day: int]\n\u001b[1m\u001b[34mhostDF3\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [id: string, name: string]\n\u001b[1m\u001b[34mratingDF3\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [neighbourhood: string, date: date ... 4 more fields]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1673217500399_1677476847",
+      "id": "paragraph_1673217500399_1677476847",
+      "dateCreated": "2023-01-08T22:38:20+0000",
+      "dateStarted": "2023-01-09T18:16:38+0000",
+      "dateFinished": "2023-01-09T18:16:39+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:33748"
+    },
+    {
+      "text": "val analysis3 = ratingDF3.\njoin(cityDF3, ratingDF3(\"neighbourhood\") === cityDF3(\"name\")).\njoin(dateDF3, ratingDF3(\"date\") === dateDF3(\"date\")).\njoin(hostDF3, ratingDF3(\"host_id\") === hostDF3(\"id\")).\ngroupBy(cityDF3(\"city\"), cityDF3(\"group\"), dateDF3(\"day\"), hostDF3(\"id\"), hostDF3(\"name\")).\nagg(\n    round(sum(\"ratings_sum\")/sum($\"available_listings_count\" + $\"not_available_listings_count\"),2).as(\"avg_rating\")\n)\n",
+      "user": "anonymous",
+      "dateUpdated": "2023-01-09T18:16:40+0000",
+      "progress": 50,
+      "config": {
+        "editorSetting": {
+          "completionKey": "TAB",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "language": "scala"
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34manalysis3\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [city: string, group: string ... 4 more fields]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1673284141715_173866515",
+      "id": "paragraph_1673284141715_173866515",
+      "dateCreated": "2023-01-09T17:09:01+0000",
+      "dateStarted": "2023-01-09T18:16:40+0000",
+      "dateFinished": "2023-01-09T18:16:40+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:33749"
+    },
+    {
+      "text": "val city3 = z.select(\"Choose a city\", \"MADRID\", Seq((\"MADRID\", \"Madrid\"), (\"BERLIN\", \"Berlin\"), (\"PARIS\", \"Paris\")))\nval max_year = analysis3.where($\"city\" === city3).agg(max(\"day\")).first().getInt(0)\nval result3 = analysis3.where($\"city\" === city3).where($\"day\" === max_year).drop(\"city\").drop(\"id\")\nresult3.createOrReplaceTempView(\"EMP\")",
+      "user": "anonymous",
+      "dateUpdated": "2023-01-09T18:16:41+0000",
+      "progress": 16,
+      "config": {
+        "editorSetting": {
+          "completionKey": "TAB",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "language": "scala"
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "runOnSelectionChange": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {
+          "Choose a city": "MADRID"
+        },
+        "forms": {
+          "Choose a city": {
+            "type": "Select",
+            "options": [
+              {
+                "value": "MADRID",
+                "displayName": "Madrid",
+                "$$hashKey": "object:40579"
+              },
+              {
+                "value": "BERLIN",
+                "displayName": "Berlin",
+                "$$hashKey": "object:40580"
+              },
+              {
+                "value": "PARIS",
+                "displayName": "Paris",
+                "$$hashKey": "object:40581"
+              }
+            ],
+            "name": "Choose a city",
+            "displayName": "Choose a city",
+            "defaultValue": "MADRID",
+            "hidden": false,
+            "$$hashKey": "object:40568"
+          }
+        }
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mcity3\u001b[0m: \u001b[1m\u001b[32mAny\u001b[0m = MADRID\n\u001b[1m\u001b[34mmax_year\u001b[0m: \u001b[1m\u001b[32mInt\u001b[0m = 2019\n\u001b[1m\u001b[34mresult3\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [group: string, day: int ... 2 more fields]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://my-cluster-m.europe-west4-a.c.put-big-data-2022-10-jk.internal:43707/jobs/job?id=514",
+              "$$hashKey": "object:40582"
+            },
+            {
+              "jobUrl": "http://my-cluster-m.europe-west4-a.c.put-big-data-2022-10-jk.internal:43707/jobs/job?id=515",
+              "$$hashKey": "object:40583"
+            },
+            {
+              "jobUrl": "http://my-cluster-m.europe-west4-a.c.put-big-data-2022-10-jk.internal:43707/jobs/job?id=516",
+              "$$hashKey": "object:40584"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1673284991526_1134482963",
+      "id": "paragraph_1673284991526_1134482963",
+      "dateCreated": "2023-01-09T17:23:11+0000",
+      "dateStarted": "2023-01-09T18:16:41+0000",
+      "dateFinished": "2023-01-09T18:16:43+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:33750"
+    },
+    {
+      "text": "%sql\nselect group as neighbourhood, name, avg_rating from\n    (select *, row_number() OVER (PARTITION BY group ORDER BY avg_rating DESC) as rn\n    FROM EMP) tmp where rn <= 2 ORDER BY neighbourhood DESC",
+      "user": "anonymous",
+      "dateUpdated": "2023-01-09T18:16:43+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "completionKey": "TAB",
+          "editOnDblClick": false,
+          "completionSupport": true,
+          "language": "sql"
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "multiBarChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                },
+                "stackedAreaChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                },
+                "lineChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                },
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "neighbourhood": "string",
+                      "name": "string",
+                      "avg_rating": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {},
+              "keys": [
+                {
+                  "name": "district",
+                  "index": 0,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [],
+              "values": [
+                {
+                  "name": "avg_rating",
+                  "index": 2,
+                  "aggr": "sum"
+                }
+              ]
+            },
+            "helium": {}
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "neighbourhood\tname\tavg_rating\nVillaverde\tMadreamsRent\t5.0\nVillaverde\tManu\t5.0\nVilla de Vallecas\tJuan Antonio\t4.03\nVilla de Vallecas\tRafael\t3.98\nVicálvaro\tAmelia\t5.0\nVicálvaro\tJorge\t5.0\nUsera\tJuan Miguel\t5.0\nUsera\tSergio\t5.0\nTetuán\tMercedes\t5.0\nTetuán\tSonali\t5.0\nSan Blas - Canillejas\tMariela\t5.0\nSan Blas - Canillejas\tAnder\t5.0\nSalamanca\tLola\t5.0\nSalamanca\tPedro\t5.0\nRetiro\tDobo Rooms\t5.0\nRetiro\tSonali\t5.0\nPuente de Vallecas\tFranco\t5.0\nPuente de Vallecas\tErnesto Eduardo\t5.0\nMoratalaz\tDaniel\t5.0\nMoratalaz\tGuilhem\t5.0\nMoncloa - Aravaca\tMilagros\t5.0\nMoncloa - Aravaca\tPedro\t5.0\nLatina\tAlberto\t5.0\nLatina\tFernanda\t5.0\nHortaleza\tAlberto\t5.0\nHortaleza\tAdriana\t5.0\nFuencarral - El Pardo\tPepe\t5.0\nFuencarral - El Pardo\tCarlos\t5.0\nCiudad Lineal\tFrancisco\t5.0\nCiudad Lineal\tFernando\t5.0\nChamberí\tClaudia\t5.0\nChamberí\tDiana\t5.0\nChamartín\tCarolina\t5.0\nChamartín\tDuco\t5.0\nCentro\tDirola\t5.0\nCentro\tPedro Luis\t5.0\nCarabanchel\tWelling\t5.0\nCarabanchel\tJulia\t5.0\nBarajas\tSergio\t5.0\nBarajas\tJuan Carlos\t5.0\nArganzuela\tMarco\t5.0\nArganzuela\tAndrés\t5.0\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://my-cluster-m.europe-west4-a.c.put-big-data-2022-10-jk.internal:43707/jobs/job?id=520",
+              "$$hashKey": "object:41233"
+            },
+            {
+              "jobUrl": "http://my-cluster-m.europe-west4-a.c.put-big-data-2022-10-jk.internal:43707/jobs/job?id=521",
+              "$$hashKey": "object:41234"
+            },
+            {
+              "jobUrl": "http://my-cluster-m.europe-west4-a.c.put-big-data-2022-10-jk.internal:43707/jobs/job?id=522",
+              "$$hashKey": "object:41235"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1673285149096_415307605",
+      "id": "paragraph_1673285149096_415307605",
+      "dateCreated": "2023-01-09T17:25:49+0000",
+      "dateStarted": "2023-01-09T18:16:43+0000",
+      "dateFinished": "2023-01-09T18:16:44+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:33751"
+    }
+  ],
+  "name": "Analysis",
+  "id": "2HPQCSPYS",
+  "defaultInterpreterGroup": "spark",
+  "version": "0.9.1-SNAPSHOT",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {},
+  "config": {
+    "isZeppelinNotebookCronEnable": false,
+    "looknfeel": "default",
+    "personalizedMode": "false"
+  },
+  "info": {
+    "isRunning": false
+  },
+  "path": "/Analysis"
+}
